@@ -4,7 +4,11 @@ import homeLogo from "../../Assets/home-main.png";
 import Particle from "../Particle";
 import Type from "./Type";
 import {
-} from "react-icons/si";
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
   return (
@@ -50,8 +54,62 @@ function Home() {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ 
+                  maxHeight: "450px",
+                  maxWidth: "450px",
+                  borderRadius: "50%",
+                  border: "6px solid #f5f5f5",
+                  boxShadow: "0 5px 15px rgba(0, 0, 0, 0.2)",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  display: "block",
+                  marginTop: "50px"
+                }}
               />
+              <div style={{ paddingTop: 50, textAlign: "center" }}>
+                <ul className="footer-icons">
+                  <li className="social-icons">
+                    <a
+                      href="https://github.com/David200308"
+                      style={{ color: "white" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillGithub style={{ width: "40px", height: "40px" }} />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://x.com/DavidGJiang"
+                      style={{ color: "white" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineTwitter style={{ width: "40px", height: "40px" }} />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://www.linkedin.com/in/guanlin-jiang/"
+                      style={{ color: "white" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedinIn style={{ width: "40px", height: "40px" }} />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://www.instagram.com/DavidGJiang"
+                      style={{ color: "white" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillInstagram style={{ width: "40px", height: "40px" }} />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </Col>
           </Row>
         </Container>
