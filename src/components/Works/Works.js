@@ -23,7 +23,7 @@ function Works() {
               location="Hong Kong SAR"
               title="Software Engineer (On-site)"
               date="July, 2025 - ?"
-              ghLink="https://okx.com"
+              link="https://okx.com"
             />
           </Col>
 
@@ -34,7 +34,7 @@ function Works() {
               location="Hong Kong SAR"
               title="Software Engineer Internship (On-site)"
               date="Jan, 2024 - Dec, 2024"
-              ghLink="https://themoonlab.co"
+              link="https://themoonlab.co"
             />
           </Col>
 
@@ -45,7 +45,7 @@ function Works() {
               location="Paris, France"
               title="Information Technology Internship (On-site)"
               date="June, 2023 - July, 2023"
-              ghLink="https://omniscol.com"
+              link="https://omniscol.com"
             />
           </Col>
 
