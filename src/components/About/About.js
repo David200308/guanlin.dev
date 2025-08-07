@@ -12,16 +12,17 @@ function About() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Education Experiences</strong>
+          <strong>Education Experiences</strong>
         </h1>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <Row className="justify-content-center">
+          <Col lg={10} md={11} sm={12} className="edu-card">
             <EduCards
               imgPath={PolyuLogo}
               eduName="The Hong Kong Polytechnic University"
               location="Hong Kong SAR"
               title="Bachelor of Science (Honours) in Computer Science"
+              honLevel="Second Class Honours (Upper division)"
               date="September, 2021 - June, 2025"
               link="https://www.polyu.edu.hk/"
             />
@@ -30,13 +31,13 @@ function About() {
       </Container>
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Tech Stacks</strong>
+          <strong>Tech Stacks</strong>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Spoken Languages</strong>
+          <strong>Spoken Languages</strong>
         </h1>
         <Languagestack />
 

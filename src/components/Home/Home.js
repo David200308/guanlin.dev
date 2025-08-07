@@ -71,7 +71,7 @@ function Home() {
                   <li className="social-icons">
                     <a
                       href="https://github.com/David200308"
-                      style={{ color: "white" }}
+                      style={{ color: "#333" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -81,7 +81,7 @@ function Home() {
                   <li className="social-icons">
                     <a
                       href="https://x.com/DavidGJiang"
-                      style={{ color: "white" }}
+                      style={{ color: "#333" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -91,7 +91,7 @@ function Home() {
                   <li className="social-icons">
                     <a
                       href="https://www.linkedin.com/in/guanlin-jiang/"
-                      style={{ color: "white" }}
+                      style={{ color: "#333" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -101,7 +101,7 @@ function Home() {
                   <li className="social-icons">
                     <a
                       href="https://www.instagram.com/DavidGJiang"
-                      style={{ color: "white" }}
+                      style={{ color: "#333" }}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

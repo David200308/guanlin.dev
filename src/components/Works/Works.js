@@ -12,22 +12,22 @@ function Works() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Work Experiences</strong>
+          <strong>Work Experiences</strong>
         </h1>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <Row className="justify-content-center">
+          <Col lg={8} md={10} sm={12} className="project-card">
             <WorkCards
               imgPath={OKXLogo}
               companyName="OKX"
               location="Hong Kong SAR"
               title="Software Engineer (On-site)"
-              date="July, 2025 - ?"
+              date="July, 2025 - Current"
               link="https://okx.com"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col lg={8} md={10} sm={12} className="project-card">
             <WorkCards
               imgPath={MoonlabLogo}
               companyName="Moon Lab Limited"
@@ -38,7 +38,7 @@ function Works() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col lg={8} md={10} sm={12} className="project-card">
             <WorkCards
               imgPath={OmniscolLogo}
               companyName="Omniscol"

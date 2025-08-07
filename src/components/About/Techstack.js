@@ -22,6 +22,10 @@ import {
   SiMysql,
   SiMongodb,
   SiVercel,
+  SiElasticsearch,
+  SiApachehadoop,
+  SiOracle,
+  SiAlibabacloud,
 } from "react-icons/si";
 import { TbBrandGolang, TbBrandTypescript } from "react-icons/tb";
 
@@ -42,14 +46,14 @@ function Techstack() {
         <p style={{ fontSize: "30px" }}>JavaScript</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Golang</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <DiJava />
         <hr />
         <p style={{ fontSize: "30px" }}>Java</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <TbBrandGolang />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Golang</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiPython />
@@ -60,6 +64,11 @@ function Techstack() {
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Backend Frameworks
       </h2>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSpringboot />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Spring Boot</p>
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiNestjs />
         <hr />
@@ -76,14 +85,53 @@ function Techstack() {
         <p style={{ fontSize: "30px" }}>Fastify</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSpringboot />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Spring Boot</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <SiFlask />
         <hr />
         <p style={{ fontSize: "30px" }}>Flask</p>
+      </Col>
+
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
+        Database & Data Streaming
+      </h2>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMysql />
+        <hr />
+        <p style={{ fontSize: "30px" }}>MySQL</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMongodb />
+        <hr />
+        <p style={{ fontSize: "30px" }}>MongoDB</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPostgresql />
+        <hr />
+        <p style={{ fontSize: "30px" }}>PostgreSQL</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiFirebase />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Firebase FireStore</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiRedis />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Redis</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiElasticsearch />
+        <hr />
+        <p style={{ fontSize: "30px" }}>ElasticSearch</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiApachehadoop />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Hadoop & HBase</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiOracle />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Oracle Database</p>
       </Col>
 
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
@@ -106,40 +154,6 @@ function Techstack() {
       </Col>
 
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
-        Database
-      </h2>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-        <hr />
-        <p style={{ fontSize: "30px" }}>MySQL</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMongodb />
-        <hr />
-        <p style={{ fontSize: "30px" }}>MongoDB</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-        <hr />
-        <p style={{ fontSize: "30px" }}>PostgreSQL</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Firebase FireStore</p>
-      </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiOracle />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Oracle Database</p>
-      </Col> */}
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Redis</p>
-      </Col>
-
-      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Cloud Services
       </h2>
       <Col xs={4} md={2} className="tech-icons">
@@ -157,7 +171,11 @@ function Techstack() {
         <hr />
         <p style={{ fontSize: "30px" }}>Vercel</p>
       </Col>
-
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAlibabacloud />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Alibaba Cloud</p>
+      </Col>
     </Row>
   );
 }
