@@ -532,7 +532,7 @@ button:focus {
 }
 
 .tech-icons {
-  font-size: 4.5em !important;
+  font-size: clamp(2.5em, 8vw, 4.5em) !important;
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
@@ -555,7 +555,27 @@ button:focus {
 
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 8px !important;
+    padding: 8px !important;
+    font-size: clamp(2em, 6vw, 3em) !important;
+  }
+  
+  .tech-icons p {
+    font-size: clamp(12px, 2.5vw, 16px) !important;
+    margin: 5px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-icons {
+    margin: 5px !important;
+    padding: 5px !important;
+    font-size: clamp(1.5em, 5vw, 2.5em) !important;
+  }
+  
+  .tech-icons p {
+    font-size: clamp(10px, 2vw, 14px) !important;
+    margin: 3px 0 !important;
   }
 }
 
