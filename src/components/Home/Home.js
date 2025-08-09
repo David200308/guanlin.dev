@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.png";
 import Particle from "../Particle";
@@ -11,6 +11,49 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  useEffect(() => {
+    const handleZoom = () => {
+      // Get the zoom level from the browser
+      const zoom = window.devicePixelRatio || 1;
+      setZoomLevel(zoom);
+    };
+
+    // Listen for zoom changes
+    window.addEventListener('resize', handleZoom);
+    
+    // Initial zoom level
+    handleZoom();
+
+    return () => {
+      window.removeEventListener('resize', handleZoom);
+    };
+  }, []);
+
+  const getResponsiveDimensions = () => {
+    const baseSize = 450;
+    const responsiveSize = Math.max(baseSize * (1 / zoomLevel), 200);
+    
+    return {
+      maxHeight: `${responsiveSize}px`,
+      maxWidth: `${responsiveSize}px`,
+      transform: `scale(${Math.min(zoomLevel, 2)})`,
+      transition: 'all 0.3s ease-in-out'
+    };
+  };
+
+  const getSocialIconsSpacing = () => {
+    const baseSize = 450;
+    const responsiveSize = Math.max(baseSize * (1 / zoomLevel), 200);
+    const dynamicPadding = Math.max(50, responsiveSize * 0.15);
+        
+    return {
+      paddingTop: `${dynamicPadding}px`,
+      marginTop: `${Math.max(40, responsiveSize * 0.05) + 40}px`
+    };
+  };
+
   return (
     <section id="home" style={{ position: "relative", minHeight: "100vh" }}>
       <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
@@ -47,13 +90,13 @@ function Home() {
                   Full Stack Development
                 </h3>
                 <h3 style={{ paddingBottom: 20 }}>
+                  Blockchain Technology
+                </h3>
+                <h3 style={{ paddingBottom: 20 }}>
                   Cloud Computing
                 </h3>
                 <h3 style={{ paddingBottom: 20 }}>
-                  Blockchain Tech
-                </h3>
-                <h3 style={{ paddingBottom: 20 }}>
-                  Mobile Development
+                  iOS Development
                 </h3>
               </div>
             </Col>
@@ -64,8 +107,7 @@ function Home() {
                 alt="home pic"
                 className="img-fluid"
                 style={{ 
-                  maxHeight: "450px",
-                  maxWidth: "450px",
+                  ...getResponsiveDimensions(),
                   borderRadius: "50%",
                   border: "6px solid #f5f5f5",
                   boxShadow: "0 5px 15px rgba(0, 0, 0, 0.2)",
@@ -75,7 +117,7 @@ function Home() {
                   marginTop: "50px"
                 }}
               />
-              <div style={{ paddingTop: 50, textAlign: "center" }}>
+              <div style={{ ...getSocialIconsSpacing(), textAlign: "center" }}>
                 <ul className="footer-icons">
                   <li className="social-icons">
                     <a
@@ -109,7 +151,7 @@ function Home() {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.instagram.com/DavidGJiang"
+                      href="https://www.instagram.com/DavidGJiang" 
                       style={{ color: "#333" }}
                       target="_blank"
                       rel="noopener noreferrer"

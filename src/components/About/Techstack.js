@@ -32,169 +32,149 @@ import { TbBrandGolang, TbBrandTypescript } from "react-icons/tb";
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <h2 style={{ 
-        textAlign: "center", 
-        margin: "20px 0", 
-        fontSize: "clamp(24px, 5vw, 30px)" 
-      }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Programming Languages
       </h2>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <TbBrandTypescript />
         <hr />
-        <p>Typescript</p>
+        <p style={{ fontSize: "30px" }}>Typescript</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
         <hr />
-        <p>JavaScript</p>
+        <p style={{ fontSize: "30px" }}>JavaScript</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiJava />
         <hr />
-        <p>Java</p>
+        <p style={{ fontSize: "30px" }}>Java</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <TbBrandGolang />
         <hr />
-        <p>Golang</p>
+        <p style={{ fontSize: "30px" }}>Golang</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiPython />
         <hr />
-        <p>Python</p>
+        <p style={{ fontSize: "30px" }}>Python</p>
       </Col>
 
-      <h2 style={{ 
-        textAlign: "center", 
-        margin: "20px 0", 
-        fontSize: "clamp(24px, 5vw, 30px)" 
-      }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Backend Frameworks
       </h2>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiSpringboot />
         <hr />
-        <p>Spring Boot</p>
+        <p style={{ fontSize: "30px" }}>Spring Boot</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiNestjs />
         <hr />
-        <p>NestJS</p>
+        <p style={{ fontSize: "30px" }}>NestJS</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiExpress />
         <hr />
-        <p>ExpressJS</p>
+        <p style={{ fontSize: "30px" }}>ExpressJS</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiFastify />
         <hr />
-        <p>Fastify</p>
+        <p style={{ fontSize: "30px" }}>Fastify</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiFlask />
         <hr />
-        <p>Flask</p>
+        <p style={{ fontSize: "30px" }}>Flask</p>
       </Col>
 
-      <h2 style={{ 
-        textAlign: "center", 
-        margin: "20px 0", 
-        fontSize: "clamp(24px, 5vw, 30px)" 
-      }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Database & Data Streaming
       </h2>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiMysql />
         <hr />
-        <p>MySQL</p>
+        <p style={{ fontSize: "30px" }}>MySQL</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiMongodb />
         <hr />
-        <p>MongoDB</p>
+        <p style={{ fontSize: "30px" }}>MongoDB</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiPostgresql />
         <hr />
-        <p>PostgreSQL</p>
+        <p style={{ fontSize: "30px" }}>PostgreSQL</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />
         <hr />
-        <p>Firebase FireStore</p>
+        <p style={{ fontSize: "30px" }}>Firebase FireStore</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiRedis />
         <hr />
-        <p>Redis</p>
+        <p style={{ fontSize: "30px" }}>Redis</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiElasticsearch />
         <hr />
-        <p>ElasticSearch</p>
+        <p style={{ fontSize: "30px" }}>ElasticSearch</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiApachehadoop />
         <hr />
-        <p>Hadoop & HBase</p>
+        <p style={{ fontSize: "30px" }}>Hadoop & HBase</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiOracle />
         <hr />
-        <p>Oracle Database</p>
+        <p style={{ fontSize: "30px" }}>Oracle Database</p>
       </Col>
 
-      <h2 style={{ 
-        textAlign: "center", 
-        margin: "20px 0", 
-        fontSize: "clamp(24px, 5vw, 30px)" 
-      }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Frontend Frameworks
       </h2>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiReact />
         <hr />
-        <p>React</p>
+        <p style={{ fontSize: "30px" }}>React</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiRemix />
         <hr />
-        <p>Remix</p>
+        <p style={{ fontSize: "30px" }}>Remix</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiSolid />
         <hr />
-        <p>Solid</p>
+        <p style={{ fontSize: "30px" }}>Solid</p>
       </Col>
 
-      <h2 style={{ 
-        textAlign: "center", 
-        margin: "20px 0", 
-        fontSize: "clamp(24px, 5vw, 30px)" 
-      }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Cloud Services
       </h2>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiGoogleCloudPlatform />
         <hr />
-        <p>Google Cloud Platform</p>
+        <p style={{ fontSize: "30px" }}>Google Cloud Platform</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <DiAws />
         <hr />
-        <p>AWS</p>
+        <p style={{ fontSize: "30px" }}>AWS</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiVercel />
         <hr />
-        <p>Vercel</p>
+        <p style={{ fontSize: "30px" }}>Vercel</p>
       </Col>
-      <Col xs={6} sm={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons">
         <SiAlibabacloud />
         <hr />
-        <p>Alibaba Cloud</p>
+        <p style={{ fontSize: "30px" }}>Alibaba Cloud</p>
       </Col>
     </Row>
   );
