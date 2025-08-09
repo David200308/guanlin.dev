@@ -12,11 +12,20 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
   return (
-    <section>
-      <Container fluid className="home-section" id="home">
+    <section id="home" style={{ position: "relative", minHeight: "100vh" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
         <Particle />
+      </div>
+      
+      <Container fluid className="home-section" style={{ 
+        position: "relative", 
+        zIndex: 10,
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center"
+      }}>
         <Container className="home-content">
-          <Row>
+          <Row className="align-items-center">
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
