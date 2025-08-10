@@ -1161,12 +1161,39 @@ button:focus {
   }
   
   .clear-filters-btn {
-    width: 100%;
-    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    white-space: nowrap;
   }
   
   .tag-badge {
     padding: 6px 14px;
     font-size: 0.85rem;
+  }
+  
+  /* Mobile layout for results count and clear button */
+  .blog-section .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .blog-section .d-flex.justify-content-between .text-muted {
+    text-align: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .clear-filters-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: auto;
+    min-width: 140px;
+  }
+  
+  .blog-section .d-flex.justify-content-between {
+    gap: 15px;
   }
 }
