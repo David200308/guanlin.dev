@@ -22,7 +22,7 @@ function Projects() {
               title="Central Custody Blockchain Wallet Platform"
               description=""
               ghLink="https://github.com/David200308/Central-Custody-Blockchain-Wallet-Platform"
-              demoLink="https://wallet.skyproton.com/"
+              // demoLink="https://wallet.skyproton.com/"
             />
           </Col>
 
