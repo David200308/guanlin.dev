@@ -47,6 +47,8 @@ const ResumeNew: React.FC = () => {
               scale={width > 786 ? 1.7 : 0.6}
               loading="Loading page..."
               error="Failed to load page."
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
             />
           </Document>
         </Row>
