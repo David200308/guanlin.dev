@@ -6,7 +6,7 @@ import ProjectWalletImage from "../../Assets/Projects/project-wallet_platform.pn
 import ProjectAuthSystemImage from "../../Assets/Projects/project-auth_system.png";
 import ProjectBudgetAPPImage from "../../Assets/Projects/project-budget_app.png";
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -51,6 +51,6 @@ function Projects() {
       </Container>
     </Container>
   );
-}
+};
 
 export default Projects;

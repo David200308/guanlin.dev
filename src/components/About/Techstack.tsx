@@ -29,7 +29,7 @@ import {
 } from "react-icons/si";
 import { TbBrandGolang, TbBrandTypescript } from "react-icons/tb";
 
-function Techstack() {
+const Techstack: React.FC = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
@@ -178,6 +178,6 @@ function Techstack() {
       </Col>
     </Row>
   );
-}
+};
 
 export default Techstack;

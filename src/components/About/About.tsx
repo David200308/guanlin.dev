@@ -6,7 +6,7 @@ import EduCards from "./EduCards";
 import Languagestack from "./Languagestack";
 import PolyuLogo from "../../Assets/Works/polyu-logo.png";
 
-function About() {
+const About: React.FC = () => {
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -44,6 +44,6 @@ function About() {
       </Container>
     </Container>
   );
-}
+};
 
 export default About;

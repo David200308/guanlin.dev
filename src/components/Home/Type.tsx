@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-function Type() {
+const Type: React.FC = () => {
   return (
     <>
       <style>
@@ -78,6 +78,6 @@ function Type() {
       </div>
     </>
   );
-}
+};
 
 export default Type;

@@ -6,7 +6,7 @@ import OKXLogo from "../../Assets/Works/okx-logo.png";
 import MoonlabLogo from "../../Assets/Works/moonlab-logo.png";
 import OmniscolLogo from "../../Assets/Works/omniscol-logo.png";
 
-function Works() {
+const Works: React.FC = () => {
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -53,6 +53,6 @@ function Works() {
       </Container>
     </Container>
   );
-}
+};
 
 export default Works;

@@ -1,7 +1,7 @@
 import React from "react";
 import Particles from "react-tsparticles";
 
-function Particle() {
+const Particle: React.FC = () => {
   return (
     <Particles
       id="tsparticles"
@@ -50,6 +50,6 @@ function Particle() {
       }}
     />
   );
-}
+};
 
 export default Particle;

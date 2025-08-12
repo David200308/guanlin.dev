@@ -10,20 +10,16 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-function Home() {
-  const [zoomLevel, setZoomLevel] = useState(1);
+const Home: React.FC = () => {
+  const [zoomLevel, setZoomLevel] = useState<number>(1);
 
   useEffect(() => {
     const handleZoom = () => {
-      // Get the zoom level from the browser
       const zoom = window.devicePixelRatio || 1;
       setZoomLevel(zoom);
     };
 
-    // Listen for zoom changes
     window.addEventListener('resize', handleZoom);
-    
-    // Initial zoom level
     handleZoom();
 
     return () => {
@@ -31,7 +27,7 @@ function Home() {
     };
   }, []);
 
-  const getResponsiveDimensions = () => {
+  const getResponsiveDimensions = (): React.CSSProperties => {
     const baseSize = 450;
     const responsiveSize = Math.max(baseSize * (1 / zoomLevel), 200);
     
@@ -43,7 +39,7 @@ function Home() {
     };
   };
 
-  const getSocialIconsSpacing = () => {
+  const getSocialIconsSpacing = (): React.CSSProperties => {
     const baseSize = 450;
     const responsiveSize = Math.max(baseSize * (1 / zoomLevel), 200);
     const dynamicPadding = Math.max(50, responsiveSize * 0.15);
@@ -167,6 +163,6 @@ function Home() {
       </Container>
     </section>
   );
-}
+};
 
 export default Home;

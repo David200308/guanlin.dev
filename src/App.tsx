@@ -18,7 +18,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
@@ -37,6 +37,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

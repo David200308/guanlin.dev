@@ -1,15 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Form, Button, Badge } from "react-bootstrap";
+import React, { useState, useEffect, useCallback } from "react";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import BlogCard from "./BlogCard";
 import Particle from "../Particle";
 
-function Blog() {
-  const [blogPosts, setBlogPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [availableTags, setAvailableTags] = useState([]);
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  slug: string;
+}
+
+const Blog: React.FC = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [availableTags, setAvailableTags] = useState<string[]>([]);
 
   useEffect(() => {
     fetchBlogPosts();
@@ -29,18 +40,18 @@ function Blog() {
       setBlogPosts(data.posts);
       
       // Extract unique tags from all posts
-      const tags = [...new Set(data.posts.flatMap(post => post.tags))];
+      const tags = [...new Set(data.posts.flatMap((post: BlogPost) => post.tags))] as string[];
       setAvailableTags(tags.sort());
       
       setLoading(false);
     } catch (err) {
       console.error('Error fetching blog posts:', err);
-      setError(err.message);
+      setError(err instanceof Error ? err.message : 'Unknown error');
       setLoading(false);
     }
   };
 
-  const filterPosts = () => {
+  const filterPosts = useCallback(() => {
     let filtered = [...blogPosts];
 
     // Filter by selected tags
@@ -51,9 +62,9 @@ function Blog() {
     }
 
     setFilteredPosts(filtered);
-  };
+  }, [blogPosts, selectedTags]);
 
-  const handleTagToggle = (tag) => {
+  const handleTagToggle = (tag: string) => {
     setSelectedTags(prev =>
       prev.includes(tag)
         ? prev.filter(t => t !== tag)
@@ -105,8 +116,6 @@ function Blog() {
           <strong className="purple">Blog Posts</strong>
         </h1>
         
-        
-
         {/* Tags Filter */}
         <Row className="mb-4">
           <Col>
@@ -175,6 +184,6 @@ function Blog() {
       </Container>
     </Container>
   );
-}
+};
 
 export default Blog;

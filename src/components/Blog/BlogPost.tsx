@@ -1,22 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col, Card, Badge, Button } from "react-bootstrap";
 import { BsCalendar3, BsClock, BsArrowLeft } from "react-icons/bs";
 import { useParams, useNavigate } from "react-router-dom";
 import Particle from "../Particle";
 
-function BlogPost() {
-  const { slug } = useParams();
+interface BlogPostData {
+  id: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  slug: string;
+  filename: string;
+}
+
+const BlogPost: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const [postData, setPostData] = useState(null);
-  const [postContent, setPostContent] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [postData, setPostData] = useState<BlogPostData | null>(null);
+  const [postContent, setPostContent] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchBlogPost();
   }, [slug]);
 
-  const fetchBlogPost = async () => {
+  const fetchBlogPost = useCallback(async () => {
     try {
       setLoading(true);
       
@@ -27,7 +39,7 @@ function BlogPost() {
       }
       const metadata = await metadataResponse.json();
       
-      const currentPost = metadata.posts.find(post => post.slug === slug);
+      const currentPost = metadata.posts.find((post: BlogPostData) => post.slug === slug);
       if (!currentPost) {
         throw new Error('Blog post not found');
       }
@@ -63,10 +75,10 @@ function BlogPost() {
       setLoading(false);
     } catch (err) {
       console.error('Error fetching blog post:', err);
-      setError(err.message);
+      setError(err instanceof Error ? err.message : 'Unknown error');
       setLoading(false);
     }
-  };
+  }, [slug]);
 
   if (loading) {
     return (
@@ -95,8 +107,8 @@ function BlogPost() {
     );
   }
 
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formatDate = (dateString: string) => {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
@@ -188,6 +200,6 @@ function BlogPost() {
       </Container>
     </Container>
   );
-}
+};
 
 export default BlogPost;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 
-function Languagestack() {
+const Languagestack: React.FC = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="lang">
@@ -21,6 +21,6 @@ function Languagestack() {
       </Col>
     </Row>
   );
-}
+};
 
 export default Languagestack;
