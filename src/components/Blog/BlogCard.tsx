@@ -9,13 +9,12 @@ interface BlogCardProps {
   excerpt: string;
   image: string;
   date: string;
-  readTime: string;
   tags: string[];
   slug: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = (props) => {
-  const { title, excerpt, image, date, readTime, tags, slug } = props;
+  const { title, excerpt, image, date, tags, slug } = props;
 
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -35,10 +34,6 @@ const BlogCard: React.FC<BlogCardProps> = (props) => {
           <small className="text-muted me-3">
             <BsCalendar3 className="me-1" />
             {formatDate(date)}
-          </small>
-          <small className="text-muted">
-            <BsClock className="me-1" />
-            {readTime}
           </small>
         </div>
         

@@ -21,10 +21,24 @@ const Blog: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [availableTags, setAvailableTags] = useState<string[]>([]);
+  const [showAllTags, setShowAllTags] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     fetchBlogPosts();
+    checkScreenSize();
+    
+    const handleResize = () => {
+      checkScreenSize();
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const checkScreenSize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
 
   useEffect(() => {
     filterPosts();
@@ -39,10 +53,26 @@ const Blog: React.FC = () => {
       const data = await response.json();
       setBlogPosts(data.posts);
       
-      // Extract unique tags from all posts
+      // Extract unique tags from all posts and prioritize specific tags
       const tags = [...new Set(data.posts.flatMap((post: BlogPost) => post.tags))] as string[];
-      setAvailableTags(tags.sort());
       
+      // Sort tags with priority for Tech, Life, and PolyU Course Notes
+      const priorityTags = ['Tech', 'Life', 'PolyU Course Notes'];
+      const sortedTags = tags.sort((a, b) => {
+        const aPriority = priorityTags.indexOf(a);
+        const bPriority = priorityTags.indexOf(b);
+        
+        if (aPriority !== -1 && bPriority !== -1) {
+          return aPriority - bPriority;
+        } else if (aPriority !== -1) {
+          return -1;
+        } else if (bPriority !== -1) {
+          return 1;
+        }
+        return a.localeCompare(b);
+      });
+      
+      setAvailableTags(sortedTags);
       setLoading(false);
     } catch (err) {
       console.error('Error fetching blog posts:', err);
@@ -78,6 +108,39 @@ const Blog: React.FC = () => {
 
   const getActiveFiltersCount = () => {
     return selectedTags.length;
+  };
+
+  const getVisibleTags = () => {
+    if (isMobile) {
+      // In mobile mode, always show first 3 tags (Tech, Life, PolyU Course Notes)
+      const alwaysVisible = availableTags.slice(0, 3);
+      if (showAllTags) {
+        return availableTags;
+      }
+      return alwaysVisible;
+    } else {
+      // In computer mode, show all tags if they fit in one line, otherwise use show more/less
+      if (availableTags.length <= 8) {
+        return availableTags;
+      }
+      return showAllTags ? availableTags : availableTags.slice(0, 8);
+    }
+  };
+
+  const shouldShowToggle = () => {
+    if (isMobile) {
+      return availableTags.length > 3;
+    } else {
+      return availableTags.length > 8;
+    }
+  };
+
+  const getToggleText = () => {
+    if (isMobile) {
+      return showAllTags ? "Show Less" : "Show More";
+    } else {
+      return showAllTags ? "Show Less" : "Show More";
+    }
   };
 
   if (loading) {
@@ -121,7 +184,7 @@ const Blog: React.FC = () => {
           <Col>
             <div className="tags-filter">
               <span className="fw-bold">Filter by tags:</span>
-              {availableTags.map((tag) => (
+              {getVisibleTags().map((tag) => (
                 <Badge
                   key={tag}
                   bg={selectedTags.includes(tag) ? "dark" : "light"}
@@ -133,6 +196,17 @@ const Blog: React.FC = () => {
                   {tag}
                 </Badge>
               ))}
+              {shouldShowToggle() && (
+                <Button
+                  variant="link"
+                  size="sm"
+                  className="show-more-tags-btn p-0 ms-2"
+                  onClick={() => setShowAllTags(!showAllTags)}
+                  style={{ textDecoration: 'none', color: '#6c757d' }}
+                >
+                  {getToggleText()}
+                </Button>
+              )}
             </div>
           </Col>
         </Row>
@@ -166,7 +240,6 @@ const Blog: React.FC = () => {
                   excerpt={post.excerpt}
                   image={post.image}
                   date={post.date}
-                  readTime={post.readTime}
                   tags={post.tags}
                   slug={post.slug}
                 />
