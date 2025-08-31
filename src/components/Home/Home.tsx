@@ -155,6 +155,20 @@ const Home: React.FC = () => {
                       <AiFillInstagram style={{ width: "40px", height: "40px" }} />
                     </a>
                   </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://www.xiaohongshu.com/user/profile/60d67c2c000000000101c5b9" 
+                      style={{ color: "#333" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img 
+                        src="data:image/webp;base64,UklGRiIEAABXRUJQVlA4TBUEAAAvK8FKECcQEQKBFG52EQP12nrCSJJQEQDd4wAYjwLwjAkAY+WfFCBhUNXZX9sR/Z8A+PH/j/9//P8/H+Pex5l24XRfwqcK9/1Egftpupv78+AnEVkInwl9FFngP4oiwI+ChTBzfC64xaKAeoUHu0bhsWn/loW/zLRWNoKZyUkKMzMtVQSv1ThhL3LztdItwOWYsVNaaaHIQjAguUbkLlpAFjA1cs+vkwXeBMaq9LZ1igBtIEVah4VgAzsAuNeLArLCAwALl8n2kA1FgFawE6Vl2KCXiFaJEjDDi7b1yI5NhKtcAm9HEsEqRYB2sISWYSEY4gS4SpQ4i34BAISv/rivvutkyS/R37MWnc3W9RzCv/M8zz8O6sz916jI/a1TJEKE7iFIMDAKCOook18zUYeHwiRBBZchcQgtkwWvYTgq6LIpx7AyU2qVIfhfAagCDwXD3CxxCL01buQh3p57gltThuACaR5YCezhqdww+gTuEZtlaVzRXCPQnjAXfhSXJo4Ay2gaKDqaKOryqDjXqxF1/rlTKOCzeQvSuX+tBXE/z/OU4GOBp004U9a1JWAH867bZosCMoWpcczlRVngbWGc5hhUBGgMO4X/GDYAyHNtIhaCNWmWOCYKyBx+yV6TZYG3ZwO45iJJEaA9aZIwhoVgDzsRzhUFZNELylxJkAXeIr9OEaBF2xzwfkjkpgosBIsS3FPcPe7FDyVLaK+dXTBVkbTRFgaezHVYD8/AV/+35Ev5+98CRRd19JQwCBKo46C0lrcAiiTMcQmwlXVowjGGpio6MCFI4myvFqvJBhizPZFVQefNyQL/xCHYGlGH5pTZ0vvBJ4IqqAjMkU7CrgL7boF7AiTQLBpvzyWAR+4etQ4N2nP00iS+BUUB9oQePXP1sAP/RGQQ3J3tmaMHMxpxdfwc9D6ODj4TOv59hI57Bjr4PqADD93vpzToqatB8EZywz91yI4/7g0cDXwqNHyrMJ+72FVh7xbJ3scFgo6HQANbrMYq86N+jiiDm5kTCOOgu4Jm1EFdDLgUFzNTFb7qe9DFzDSKGrzO7719suJgZl9lVosiM/tWUfkqLnTxwAQAgZmxOh4BZsZRWOWFjhEEAMBMUAdVkhVm12I11GWhOKzw1oBbQ7KDCZpRRQ1eCEZsVWZsXY+EXlb5Ki51D/DVQdA+NF4GBVtFhVVe6hqAVfCdoEHF0WE11GWpYwA0XQee6UYVGRB01BLesgRj85jIS8Gt8qpLtg0qKrTgUqHqkOEgHpMXyxoCdRARjI06qMtihwZ1cEtek1CDFwsKgoGXgGBwUfkqrga3KLkRRy+5WbDKy12S5GBk6CQHo+OtgbosdwhOB2P35hc8+XsXfzf2551g73+Lwt7+dvDj/x////j/fyQCAA==" 
+                        alt="Rednote/Xiaohongshu"
+                        style={{ height: "70px" }}
+                      />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </Col>
