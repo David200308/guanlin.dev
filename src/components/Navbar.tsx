@@ -54,32 +54,32 @@ const NavBar: React.FC = () => {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><AiOutlineHome /></span> Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><AiOutlineUser /></span> About
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/work" onClick={() => updateExpanded(false)}>
-                <CgWorkAlt style={{ marginBottom: "2px" }} /> Works
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><CgWorkAlt /></span> Works
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><AiOutlineFundProjectionScreen /></span> Projects
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/resume" onClick={() => updateExpanded(false)}>
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><CgFileDocument /></span> Resume
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/blog" onClick={() => updateExpanded(false)}>
-                <ImBlog style={{ marginBottom: "2px" }} /> Blog
+                <span style={{ marginBottom: "2px", display: "inline-block" }}><ImBlog /></span> Blog
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="fork-btn">
@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                Follow my GitHub <SiGithub style={{ marginBottom: "2px", marginLeft: "5px" }} />
+                Follow my GitHub <span style={{ marginBottom: "2px", marginLeft: "5px", display: "inline-block" }}><SiGithub /></span>
               </Button>
             </Nav.Item>
           </Nav>

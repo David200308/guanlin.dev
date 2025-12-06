@@ -1,5 +1,5 @@
 import React from "react";
-import Particles from "react-tsparticles";
+import { Particles } from "@tsparticles/react";
 
 const Particle: React.FC = () => {
   return (
