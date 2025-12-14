@@ -5,8 +5,8 @@ import Particle from "../Particle";
 import Type from "./Type";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineX,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -127,16 +127,6 @@ const Home: React.FC = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://x.com/DavidGJiang"
-                      style={{ color: "#333" }}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <AiOutlineTwitter style={{ width: "40px", height: "40px" }} />
-                    </a>
-                  </li>
-                  <li className="social-icons">
-                    <a
                       href="https://www.linkedin.com/in/guanlin-jiang/"
                       style={{ color: "#333" }}
                       target="_blank"
@@ -153,6 +143,16 @@ const Home: React.FC = () => {
                       rel="noopener noreferrer"
                     >
                       <AiFillInstagram style={{ width: "40px", height: "40px" }} />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      href="https://x.com/DavidGJiang"
+                      style={{ color: "#333" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineX style={{ width: "40px", height: "40px" }} />
                     </a>
                   </li>
                   <li className="social-icons">
