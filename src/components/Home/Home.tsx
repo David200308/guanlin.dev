@@ -102,10 +102,10 @@ const Home: React.FC = () => {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ 
+                style={{
                   ...getResponsiveDimensions(),
                   borderRadius: "50%",
-                  border: "6px solid #f5f5f5",
+                  border: "6px solid var(--border-color)",
                   boxShadow: "0 5px 15px rgba(0, 0, 0, 0.2)",
                   marginLeft: "auto",
                   marginRight: "auto",
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
                   <li className="social-icons">
                     <a
                       href="https://github.com/David200308"
-                      style={{ color: "#333" }}
+                      className="icon-colour"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
                   <li className="social-icons">
                     <a
                       href="https://www.linkedin.com/in/guanlin-jiang/"
-                      style={{ color: "#333" }}
+                      className="icon-colour"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -137,8 +137,8 @@ const Home: React.FC = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.instagram.com/DavidGJiang" 
-                      style={{ color: "#333" }}
+                      href="https://www.instagram.com/DavidGJiang"
+                      className="icon-colour"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -148,7 +148,7 @@ const Home: React.FC = () => {
                   <li className="social-icons">
                     <a
                       href="https://x.com/DavidGJiang"
-                      style={{ color: "#333" }}
+                      className="icon-colour"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -157,8 +157,8 @@ const Home: React.FC = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.xiaohongshu.com/user/profile/60d67c2c000000000101c5b9" 
-                      style={{ color: "#333" }}
+                      href="https://www.xiaohongshu.com/user/profile/60d67c2c000000000101c5b9"
+                      className="icon-colour"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

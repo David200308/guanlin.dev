@@ -1,11 +1,59 @@
 html {
-  --section-background-color: white;
-  --image-gradient: white;
-  --imp-text-color: #333;
+  --section-background-color: #ffffff;
+  --image-gradient: #ffffff;
+  --imp-text-color: #333333;
+  --bg-color: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --card-bg: #ffffff;
+  --border-color: #dddddd;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --sticky-shadow: rgba(0, 0, 0, 0.1);
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #cccccc;
+  --scrollbar-thumb-hover: #999999;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --pdf-viewer-bg: #f9f9f9;
+}
+
+html[data-theme="dark"] {
+  --section-background-color: #0d1117;
+  --image-gradient: #0d1117;
+  --imp-text-color: #e6edf3;
+  --bg-color: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+  --navbar-bg: rgba(13, 17, 23, 0.95);
+  --sticky-shadow: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: #161b22;
+  --scrollbar-thumb: #30363d;
+  --scrollbar-thumb-hover: #484f58;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --input-bg: #161b22;
+  --pdf-viewer-bg: #161b22;
+  /* Bootstrap variable overrides */
+  --bs-body-bg: #0d1117;
+  --bs-body-color: #e6edf3;
+  --bs-card-bg: #161b22;
+  --bs-card-color: #e6edf3;
+  --bs-card-border-color: #30363d;
+  --bs-secondary-bg: #161b22;
+  --bs-tertiary-bg: #1c2128;
 }
 
 .purple {
   color: var(--imp-text-color) !important;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:focus {
@@ -24,18 +72,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: var(--scrollbar-track);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: var(--scrollbar-thumb);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #999;
+  background: var(--scrollbar-thumb-hover);
   border-radius: 12px;
 }
 
@@ -43,9 +91,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: var(--navbar-bg) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 10px 10px 0px var(--sticky-shadow) !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -64,7 +112,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #333 !important;
+  background-color: var(--text-primary) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -111,14 +159,14 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: white !important;
+    background-color: var(--bg-color) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
 .navbar-brand {
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 .logo {
@@ -127,7 +175,7 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -161,7 +209,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #333;
+  background: var(--text-primary);
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -236,7 +284,7 @@ button:focus {
 
 .home-content {
   padding: 3rem 0 2rem !important;
-  color: #333;
+  color: var(--text-primary);
   text-align: left;
   position: relative;
   z-index: 10;
@@ -254,17 +302,17 @@ button:focus {
 }
 
 .main-name {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 @media (max-width: 767px) {
@@ -297,7 +345,7 @@ button:focus {
 }
 
 .home-about-description {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -312,7 +360,7 @@ button:focus {
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 .home-about-social-links {
@@ -331,10 +379,10 @@ button:focus {
   text-align: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
-  background: #333 !important;
+  background: var(--text-primary) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
-  color: white !important;
+  color: var(--bg-color) !important;
   z-index: 1 !important;
   text-decoration: none !important;
   cursor: pointer !important;
@@ -348,7 +396,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #555;
+  background: var(--text-secondary);
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -357,13 +405,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #777;
+  box-shadow: 0 0 15px var(--text-secondary);
 }
 
 .home-social-icons:hover {
-  color: white;
-  box-shadow: 0 0 5px #777;
-  text-shadow: 0 0 2px #777;
+  color: var(--bg-color);
+  box-shadow: 0 0 5px var(--text-secondary);
+  text-shadow: 0 0 2px var(--text-secondary);
 }
 
 .social-icons {
@@ -373,17 +421,17 @@ button:focus {
 }
 
 .icon-colour {
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #f8f9fa;
+  background-color: var(--bg-secondary) !important;
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
 .footer-copywright {
   text-align: center !important;
@@ -406,7 +454,7 @@ button:focus {
 
 .footer h3 {
   font-size: 1em;
-  color: #333 !important;
+  color: var(--text-primary) !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
@@ -420,7 +468,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #666 !important;
+  color: var(--text-secondary) !important;
 }
 /* --------- */
 /* Projects */
@@ -429,7 +477,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-color: white !important;
+  background-color: var(--bg-color) !important;
 }
 
 .project-card {
@@ -441,9 +489,9 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.1) !important;
-  color: #333 !important;
-  background-color: white !important;
+  box-shadow: 0 4px 5px 3px var(--shadow-color) !important;
+  color: var(--text-primary) !important;
+  background-color: var(--card-bg) !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -463,15 +511,15 @@ button:focus {
 }
 
 .blog-card-view {
-  background-color: white !important;
-  box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.1) !important;
-  color: #333 !important;
+  background-color: var(--card-bg) !important;
+  box-shadow: 0 3px 3px 2px var(--shadow-color) !important;
+  color: var(--text-primary) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 
 .blog-link {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   text-decoration: none !important;
 }
 
@@ -490,11 +538,11 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-color: white !important;
+  background-color: var(--bg-color) !important;
 }
 
 .blog-heading {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -502,7 +550,7 @@ button:focus {
 }
 
 .blog-subheading {
-  color: #666 !important;
+  color: var(--text-secondary) !important;
   font-size: 1.1em !important;
   margin-bottom: 40px !important;
   max-width: 600px !important;
@@ -514,12 +562,12 @@ button:focus {
   font-size: 1.3em !important;
   font-weight: 600 !important;
   margin-bottom: 15px !important;
-  color: #333 !important;
+  color: var(--text-primary) !important;
   line-height: 1.4 !important;
 }
 
 .blog-excerpt {
-  color: #666 !important;
+  color: var(--text-secondary) !important;
   font-size: 0.95em !important;
   line-height: 1.6 !important;
   margin-bottom: 15px !important;
@@ -553,13 +601,14 @@ button:focus {
 /* Blog Post View Styles */
 .blog-post-view {
   border: none !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 6px var(--shadow-color) !important;
   border-radius: 15px !important;
   overflow: hidden !important;
+  background-color: var(--card-bg) !important;
 }
 
 .blog-post-title {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-size: 2.2em !important;
   font-weight: 600 !important;
   line-height: 1.3 !important;
@@ -568,21 +617,21 @@ button:focus {
 .blog-content {
   text-align: left !important;
   line-height: 1.8 !important;
-  color: #444 !important;
+  color: var(--text-primary) !important;
 }
 
 .blog-content h2 {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-size: 1.6em !important;
   font-weight: 600 !important;
   margin-top: 30px !important;
   margin-bottom: 15px !important;
-  border-bottom: 2px solid #eee !important;
+  border-bottom: 2px solid var(--border-color) !important;
   padding-bottom: 8px !important;
 }
 
 .blog-content h3 {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-size: 1.3em !important;
   font-weight: 600 !important;
   margin-top: 25px !important;
@@ -605,11 +654,11 @@ button:focus {
 }
 
 .blog-content blockquote {
-  border-left: 4px solid #333 !important;
+  border-left: 4px solid var(--text-primary) !important;
   padding-left: 20px !important;
   margin: 20px 0 !important;
   font-style: italic !important;
-  color: #666 !important;
+  color: var(--text-secondary) !important;
 }
 
 .card-img-top {
@@ -625,22 +674,22 @@ button:focus {
 }
 
 .btn-primary {
-  color: #fff !important;
-  background-color: #333 !important;
-  border-color: #333 !important;
+  color: var(--bg-color) !important;
+  background-color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  background-color: #555 !important;
-  border-color: #555 !important;
+  color: var(--bg-color) !important;
+  background-color: var(--text-secondary) !important;
+  border-color: var(--text-secondary) !important;
 }
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 .project-heading {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -654,8 +703,8 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-color: white !important;
-  color: #333 !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
 }
 
 .tech-icons {
@@ -663,7 +712,7 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid #ddd !important;
+  border: 1.7px solid var(--border-color) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
@@ -709,7 +758,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid #999 !important;
+  border: 2.2px solid var(--text-secondary) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -718,8 +767,8 @@ button:focus {
 
 .quote-card-view {
   border: none !important;
-  color: #333 !important;
-  background-color: white !important;
+  color: var(--text-primary) !important;
+  background-color: var(--bg-color) !important;
 }
 
 .about-activity {
@@ -741,8 +790,8 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-color: white !important;
-  color: #333 !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
 }
 
 .resume {
@@ -780,14 +829,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #333;
+  border-left: 2px solid var(--text-primary);
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -816,17 +865,17 @@ button:focus {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #333;
+  background: var(--bg-color);
+  border: 2px solid var(--text-primary);
 }
 
 .pdf-viewer-container {
-  border: 2px solid #ccc !important;
+  border: 2px solid var(--border-color) !important;
   border-radius: 8px !important;
   padding: 10px !important;
   display: flex !important;
   justify-content: center !important;
-  background-color: #f9f9f9 !important;
+  background-color: var(--pdf-viewer-bg) !important;
 }
 
 .like-item {
@@ -836,13 +885,13 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #f8f9fa !important;
-  border-color: #ddd !important;
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
   transition: 0.3s ease !important;
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 .like-btn:hover {
@@ -872,12 +921,12 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #f8f9fa !important;
+  background-color: var(--bg-secondary) !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
-  color: #333 !important;
-  border: 1px solid #ddd !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
 }
 
 .fork-btn-inner:hover {
@@ -893,9 +942,9 @@ button:focus {
 /* Work Cards */
 /* --------- */
 .work-card-view {
-  box-shadow: 0 4px 5px 3px rgba(128, 128, 128, 0.3) !important;
-  color: #333 !important;
-  background-color: white !important;
+  box-shadow: 0 4px 5px 3px var(--shadow-color) !important;
+  color: var(--text-primary) !important;
+  background-color: var(--card-bg) !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -973,9 +1022,9 @@ button:focus {
 }
 
 .edu-card-view {
-  box-shadow: 0 4px 5px 3px rgba(128, 128, 128, 0.3) !important;
-  color: #333 !important;
-  background-color: white !important;
+  box-shadow: 0 4px 5px 3px var(--shadow-color) !important;
+  color: var(--text-primary) !important;
+  background-color: var(--card-bg) !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -1044,11 +1093,12 @@ button:focus {
 /* Blog Filter Styles */
 .search-input {
   border-radius: 25px;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--border-color);
   padding: 12px 20px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background-color: #fff;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
   width: 100%;
   max-width: 600px;
   min-width: 350px;
@@ -1078,8 +1128,8 @@ button:focus {
 }
 
 .search-input:focus {
-  border-color: #212529;
-  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.15);
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem var(--shadow-color);
   outline: none;
 }
 
@@ -1133,9 +1183,9 @@ button:focus {
 }
 
 .tag-badge[bg="light"] {
-  background-color: #f8f9fa !important;
-  border: 1px solid #dee2e6;
-  color: #495057 !important;
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary) !important;
 }
 
 /* Filter section styling */
@@ -1192,8 +1242,70 @@ button:focus {
     width: auto;
     min-width: 140px;
   }
-  
+
   .blog-section .d-flex.justify-content-between {
     gap: 15px;
   }
+}
+
+/* --------- */
+/* Theme Toggle */
+/* --------- */
+.navbar-collapse {
+  align-items: center !important;
+}
+
+.theme-toggle {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 1.3rem !important;
+  color: var(--text-primary) !important;
+  padding: 0.4rem 0.6rem !important;
+  border-radius: 50% !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: center !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary) !important;
+}
+
+
+/* --------- */
+/* Dark mode overrides */
+/* --------- */
+html[data-theme="dark"] .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .blog-section .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+html[data-theme="dark"] .card-body,
+html[data-theme="dark"] .card-text,
+html[data-theme="dark"] .card-title {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+
+html[data-theme="dark"] .work-card-view,
+html[data-theme="dark"] .work-card-view .card-body {
+  background-color: #21262d !important;
+}
+
+html[data-theme="dark"] .edu-card-view,
+html[data-theme="dark"] .edu-card-view .card-body {
+  background-color: #21262d !important;
 }

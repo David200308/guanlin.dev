@@ -13,8 +13,14 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { SiGithub } from "react-icons/si";
+import { BsSun, BsMoon } from "react-icons/bs";
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
   const [expand, updateExpanded] = useState<boolean>(false);
   const [navColour, updateNavbar] = useState<boolean>(false);
 
@@ -92,6 +98,13 @@ const NavBar: React.FC = () => {
               </Button>
             </Nav.Item>
           </Nav>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle ms-2"
+            aria-label="Toggle dark/light mode"
+          >
+            {theme === "light" ? <BsMoon /> : <BsSun />}
+          </button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

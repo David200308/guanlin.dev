@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -19,10 +19,23 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App: React.FC = () => {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") return saved;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
+
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
