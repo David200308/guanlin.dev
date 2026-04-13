@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
 
   useEffect(() => {
     filterPosts();
-  }, [blogPosts, selectedTags]);
+  }, [filterPosts]);
 
   const fetchBlogPosts = async () => {
     try {

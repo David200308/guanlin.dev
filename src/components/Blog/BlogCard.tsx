@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
-import { BsCalendar3, BsClock, BsArrowRight } from "react-icons/bs";
+import { BsCalendar3, BsArrowRight } from "react-icons/bs";
 
 interface BlogCardProps {
   title: string;

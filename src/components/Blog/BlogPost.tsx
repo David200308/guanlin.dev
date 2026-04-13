@@ -26,7 +26,7 @@ const BlogPost: React.FC = () => {
 
   useEffect(() => {
     fetchBlogPost();
-  }, [slug]);
+  }, [fetchBlogPost]);
 
   const fetchBlogPost = useCallback(async () => {
     try {
