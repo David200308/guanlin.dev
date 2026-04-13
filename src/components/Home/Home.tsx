@@ -83,16 +83,16 @@ const Home: React.FC = () => {
               </div>
               <div style={{ padding: 50, textAlign: "left" }}>
                 <h3 style={{ paddingBottom: 20 }}>
-                  Full Stack Development
+                  AI Agents & Prompt Engineering
                 </h3>
                 <h3 style={{ paddingBottom: 20 }}>
                   Blockchain Technology
                 </h3>
                 <h3 style={{ paddingBottom: 20 }}>
-                  Cloud Computing
+                  Full Stack Development
                 </h3>
                 <h3 style={{ paddingBottom: 20 }}>
-                  iOS Development
+                  Cloud Computing
                 </h3>
               </div>
             </Col>

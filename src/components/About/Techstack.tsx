@@ -26,12 +26,28 @@ import {
   SiApachehadoop,
   SiOracle,
   SiAlibabacloud,
+  SiClaude,
+  SiOpenai,
 } from "react-icons/si";
 import { TbBrandGolang, TbBrandTypescript } from "react-icons/tb";
 
 const Techstack: React.FC = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
+        AI Tools
+      </h2>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiClaude />
+        <hr />
+        <p style={{ fontSize: "30px" }}>Claude Code</p>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiOpenai />
+        <hr />
+        <p style={{ fontSize: "30px" }}>OpenAI CodeX</p>
+      </Col>
+
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>
         Programming Languages
       </h2>
