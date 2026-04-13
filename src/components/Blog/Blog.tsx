@@ -24,25 +24,9 @@ const Blog: React.FC = () => {
   const [showAllTags, setShowAllTags] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
-  useEffect(() => {
-    fetchBlogPosts();
-    checkScreenSize();
-    
-    const handleResize = () => {
-      checkScreenSize();
-    };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < 768);
   };
-
-  useEffect(() => {
-    filterPosts();
-  }, [filterPosts]);
 
   const fetchBlogPosts = async () => {
     try {
@@ -81,6 +65,18 @@ const Blog: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    fetchBlogPosts();
+    checkScreenSize();
+
+    const handleResize = () => {
+      checkScreenSize();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const filterPosts = useCallback(() => {
     let filtered = [...blogPosts];
 
@@ -93,6 +89,10 @@ const Blog: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [blogPosts, selectedTags]);
+
+  useEffect(() => {
+    filterPosts();
+  }, [filterPosts]);
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags(prev =>

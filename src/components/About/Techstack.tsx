@@ -24,7 +24,6 @@ import {
   SiVercel,
   SiElasticsearch,
   SiApachehadoop,
-  SiOracle,
   SiAlibabacloud,
   SiClaude,
   SiOpenai,
@@ -143,11 +142,6 @@ const Techstack: React.FC = () => {
         <SiApachehadoop />
         <hr />
         <p style={{ fontSize: "30px" }}>Hadoop & HBase</p>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiOracle />
-        <hr />
-        <p style={{ fontSize: "30px" }}>Oracle Database</p>
       </Col>
 
       <h2 style={{ textAlign: "center", margin: "20px 0", fontSize: "30px" }}>

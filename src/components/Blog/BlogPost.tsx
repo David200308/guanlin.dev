@@ -24,10 +24,6 @@ const BlogPost: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchBlogPost();
-  }, [fetchBlogPost]);
-
   const fetchBlogPost = useCallback(async () => {
     try {
       setLoading(true);
@@ -79,6 +75,10 @@ const BlogPost: React.FC = () => {
       setLoading(false);
     }
   }, [slug]);
+
+  useEffect(() => {
+    fetchBlogPost();
+  }, [fetchBlogPost]);
 
   if (loading) {
     return (
