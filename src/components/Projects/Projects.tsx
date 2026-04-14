@@ -24,6 +24,7 @@ const Projects: React.FC = () => {
               title="RAG Agent System"
               description=""
               ghLink="https://github.com/David200308/rag-agent-system"
+              demoLink="https://agent.skyproton.com/"
             />
           </Col>
 
