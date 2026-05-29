@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
               title="Crypto Alert System"
               description=""
               ghLink="https://github.com/David200308/crypto-alert"
-              demoLink="https://crypto-alert.log.skyproton.com/"
+              demoLink="https://crypto.alert.skyproton.com/"
             />
           </Col>
 
