@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import ProjectRAGAgentSystemImage from "../../Assets/Projects/project-rag_agent_system.png";
+import ProjectAgentSystemImage from "../../Assets/Projects/project-agent_system.png";
 import ProjectCryptoAlertImage from "../../Assets/Projects/project-crypto_alert.png";
 import ProjectWalletImage from "../../Assets/Projects/project-wallet_platform.png";
 import ProjectAuthSystemImage from "../../Assets/Projects/project-auth_system.png";
@@ -19,9 +19,9 @@ const Projects: React.FC = () => {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={ProjectRAGAgentSystemImage}
+              imgPath={ProjectAgentSystemImage}
               isBlog={false}
-              title="RAG Agent System"
+              title="Agent System"
               description=""
               ghLink="https://github.com/David200308/rag-agent-system"
               demoLink="https://agent.skyproton.com/"
