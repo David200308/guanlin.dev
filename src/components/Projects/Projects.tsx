@@ -55,7 +55,8 @@ const Projects: React.FC = () => {
               imgPath={ProjectAuthSystemImage}
               isBlog={false}
               title="Authentication System"
-              description="Login with PassKey, Password and TOTP, Push Notification Login, QR Code Login, Google, and Facebook OAuth2.0."
+              description=""
+              // description="Login with PassKey, Password and TOTP, Push Notification Login, QR Code Login, Google, and Facebook OAuth2.0."
               ghLink="https://github.com/David200308/Authentication-System"
               // demoLink="https://auth.skyproton.com/"
             />
@@ -66,7 +67,8 @@ const Projects: React.FC = () => {
               imgPath={ProjectBudgetAPPImage}
               isBlog={false}
               title="Budget iOS APP"
-              description="Making a Budget APP by Swift (APP) & SQLite (Database) that can record transactions offline for the user."
+              description=""
+              // description="Making a Budget APP by Swift (APP) & SQLite (Database) that can record transactions offline for the user."
               ghLink="https://github.com/David200308/Budget-iOS-APP"
             />
           </Col>
