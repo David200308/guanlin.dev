@@ -89,22 +89,24 @@ const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/David200308"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                Follow my GitHub <span style={{ marginBottom: "2px", marginLeft: "5px", display: "inline-block" }}><SiGithub /></span>
-              </Button>
+              <div className="fork-btn-group">
+                <Button
+                  href="https://github.com/David200308"
+                  target="_blank"
+                  className="fork-btn-inner"
+                >
+                  Follow my GitHub <span style={{ marginBottom: "2px", marginLeft: "5px", display: "inline-block" }}><SiGithub /></span>
+                </Button>
+                <button
+                  onClick={toggleTheme}
+                  className="theme-toggle"
+                  aria-label="Toggle dark/light mode"
+                >
+                  {theme === "light" ? <BsMoon /> : <BsSun />}
+                </button>
+              </div>
             </Nav.Item>
           </Nav>
-          <button
-            onClick={toggleTheme}
-            className="theme-toggle ms-2"
-            aria-label="Toggle dark/light mode"
-          >
-            {theme === "light" ? <BsMoon /> : <BsSun />}
-          </button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

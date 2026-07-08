@@ -932,6 +932,13 @@ button:focus {
   padding-top: 10px !important;
 }
 
+.fork-btn-group {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
 .fork-btn-inner {
   line-height: 1.4em !important;
   background-color: var(--bg-secondary) !important;
