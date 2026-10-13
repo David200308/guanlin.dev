@@ -1,21 +1,22 @@
 html {
-  --section-background-color: #ffffff;
-  --image-gradient: #ffffff;
+  --section-background-color: #f5f4f0;
+  --image-gradient: #f5f4f0;
   --imp-text-color: #333333;
-  --bg-color: #ffffff;
-  --bg-secondary: #f8f9fa;
+  --bg-color: #f5f4f0;
+  --bg-secondary: #eeebe5;
   --text-primary: #333333;
   --text-secondary: #666666;
-  --card-bg: #ffffff;
-  --border-color: #dddddd;
-  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: #faf9f6;
+  --border-color: #e0dcd3;
+  --navbar-bg: rgba(245, 244, 240, 0.95);
   --sticky-shadow: rgba(0, 0, 0, 0.1);
-  --scrollbar-track: #f0f0f0;
+  --scrollbar-track: #eeebe5;
   --scrollbar-thumb: #cccccc;
   --scrollbar-thumb-hover: #999999;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --input-bg: #ffffff;
-  --pdf-viewer-bg: #f9f9f9;
+  --input-bg: #faf9f6;
+  --pdf-viewer-bg: #eeebe5;
+  --bs-body-bg: #f5f4f0;
 }
 
 html[data-theme="dark"] {
@@ -100,7 +101,7 @@ button:focus {
 .navbar {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
-  padding: 0.3rem 2rem !important;
+  padding: 1rem 2rem 0.6rem !important;
   font-size: 1.2rem !important;
 }
 
@@ -172,6 +173,9 @@ button:focus {
 .logo {
   height: 1.4em !important;
   width: 2.5em !important;
+  font-size: 2.8rem !important;
+  font-family: "Pinyon Script", cursive !important;
+  font-weight: 400 !important;
 }
 
 .navbar-nav .nav-link {
@@ -1003,6 +1007,19 @@ button:focus {
   padding: 1rem !important;
 }
 
+/* Blend white logo backgrounds into the warm light-theme card */
+html:not([data-theme="dark"]) .work-card-image,
+html:not([data-theme="dark"]) .edu-card-image {
+  mix-blend-mode: multiply;
+}
+
+/* Dark theme: flip logos to light-on-dark (hue kept) and drop the black backdrop */
+html[data-theme="dark"] .work-card-image,
+html[data-theme="dark"] .edu-card-image {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
 .work-card-body {
   flex: 0 0 60% !important;
   padding: 1.5rem !important;
@@ -1183,7 +1200,7 @@ button:focus {
   line-height: 1.5;
 }
 
-.tag-badge {
+.badge.tag-badge {
   transition: all 0.3s ease;
   user-select: none;
   padding: 8px 16px;
@@ -1197,15 +1214,22 @@ button:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.tag-badge[bg="primary"] {
-  background-color: #212529 !important;
-  color: white !important;
+/* Selected tag */
+.badge.tag-badge.bg-dark {
+  background-color: var(--text-primary) !important;
+  border: 1px solid var(--text-primary);
+  color: var(--bg-color) !important;
 }
 
-.tag-badge[bg="light"] {
-  background-color: var(--bg-secondary) !important;
+/* Unselected tag */
+.badge.tag-badge.bg-light {
+  background-color: transparent !important;
   border: 1px solid var(--border-color);
   color: var(--text-primary) !important;
+}
+
+.badge.tag-badge.bg-light:hover {
+  border-color: var(--text-secondary);
 }
 
 /* Filter section styling */
@@ -1237,7 +1261,7 @@ button:focus {
     white-space: nowrap;
   }
   
-  .tag-badge {
+  .badge.tag-badge {
     padding: 6px 14px;
     font-size: 0.85rem;
   }
